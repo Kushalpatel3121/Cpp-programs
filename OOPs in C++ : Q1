@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class Time
+{
+    int hours,minutes,seconds;
+    public:
+    int gettime();
+    int totaltime();
+};
+int Time::gettime()
+{
+    cout<<"\n\tHours? ";
+    cin>>hours;
+    cout<<"\n\tMinutes? ";
+    cin>>minutes;
+    cout<<"\n\tSeconds? ";
+    cin>>seconds;
+    cout<<"\n\tThe time is = "<<hours<<" :"<<minutes<<" :"<<seconds<<endl;
+    
+    return 0;
+}
+int Time::totaltime()
+{
+    int total;
+    total = (hours * 3600) + (minutes * 60) + seconds;
+    cout<<"\tTime in total seconds : "<<total;
+    return 0;
+}
+int main()
+{
+    Time t1;
+    cout<<"Enter time: "<<endl;
+    t1.gettime();
+    t1.totaltime();
+
+    return 0;
+}
